@@ -3,12 +3,12 @@
 #Deleting Last node
 #Node Class
 class node:
-	def _init_(self,data):
+	def __init__(self,data):
 		self.data = data
 		self.next = None
 #Linked list class
 class LinkedList:
-	def _init_(self):
+	def __init__(self):
 		self.head = None
 		self.tail = None
 	#adding elements
@@ -45,10 +45,5 @@ print("Enter elements: ")
 for i in range(n):
 	k = int(input())
 	LL.append(k)
-
-print("Before: ")
-LL.display()
-
 LL.deleteLastNode()
-print("New: ")
 LL.display()
