@@ -4,12 +4,12 @@
 
 #Node Class
 class node:
-	def _init_(self,data):
+	def __init__(self,data):
 		self.data = data
 		self.next = None
 #Linked List Class
 class LinkedList:
-	def _init_(self):
+	def __init__(self):
 		#initialization
 		self.head = None
 		self.tail = None
