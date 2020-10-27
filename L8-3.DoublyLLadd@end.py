@@ -23,22 +23,20 @@ class DLinkedList:
         while cur:
             print(cur.data)
             cur=cur.next
-    def addatpos(self,data,prev):
+    def addatend(self,data):
         cur=self.head
         new=node(data)
-        while cur:
-            if(cur==prev):
-                cur.next=new
-                new.prev=cur
-                new.next=cur.next
-        cur=cur.next
+        while cur.next:
+            cur=cur.next
+        cur.next=new
+        new.next=None
+        new.prev=cur
 d=DLinkedList()
 n=int(input("size:"))
 for i in range(n):
     k=int(input())
     d.append(k)
-prev=int(input("enter prev node to insert:"))
 p=int(input("ele:"))
-d.addatpos(p,prev)
+d.addatend(p)
 d.disp()
             
