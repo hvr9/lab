@@ -23,18 +23,9 @@ class DLinkedList:
         while cur:
             print(cur.data)
             cur=cur.next
-    def addatbegin(self,data):
-        cur=self.head
-        new=node(data)
-        new.next=cur
-        cur.prev=new
-        self.head=new
 d=DLinkedList()
 n=int(input("size:"))
 for i in range(n):
     k=int(input())
     d.append(k)
-p=int(input("ele:"))
-d.addatbegin(p)
-d.disp()
-            
+d.disp()           
